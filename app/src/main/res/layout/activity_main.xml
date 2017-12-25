@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/firstFragment"
+            android:name="com.stockquote.adit.stockquote.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF0000"
+            tools:layout="@layout/first_fragment" />
+        
+    </LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<Button android:id="@+id/newsBtn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="News" />
+	</LinearLayout>
+    <View
+   			 android:layout_width="match_parent"
+   			 android:layout_height="5dp"
+   			 android:background="@android:color/black"
+   			  />
+    
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+               <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+     
+			    <com.viewpagerindicator.CirclePageIndicator
+			        android:id="@+id/indicator"
+			        android:layout_height="wrap_content"
+			        android:layout_width="fill_parent"
+			        android:background="#323232"
+			        android:textColor="#2FB3E3"
+			 	    app:radius="10dp"
+			        app:fillColor="#FF888888"
+			        app:pageColor="#FFFFFF"
+			        app:strokeColor="#FF000000"
+			        app:strokeWidth="2dp"/>
+			    <TabWidget
+                android:id="@android:id/tabs"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"/>
+ 
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
