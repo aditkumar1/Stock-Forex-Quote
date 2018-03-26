@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class CommonUtils {
     public static String paasEndPointURL="https://aditstock-developer-edition.na73.force.com/stock/services/apexrest/request";
-    public static String APIkey="KLFU6DPQBTRILH00";
+    public static String APIkey="";
     public static String listStockFetchUrl="https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=1min&outputsize=compact&apikey="+APIkey+"&datatype=csv&symbol=";
     public static String stockFetchUrl ="https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&apikey="+APIkey+"&datatype=csv&symbol=";
     public static String uniqueID = null;
